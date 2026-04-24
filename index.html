@@ -12,13 +12,16 @@
 </head>
 <body>
 
+    <!-- Mobile menu toggle -->
     <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar">
         <span></span><span></span><span></span>
     </button>
 
+    <!-- Overlay for mobile menu -->
     <div class="nav-overlay" aria-hidden="true"></div>
 
     <div class="layout">
+        <!-- Sidebar Navigation -->
         <nav class="sidebar" id="sidebar" role="navigation" aria-label="Menú principal">
             <div class="logo-container">
                 <img src="logo.png" alt="Minakawa Investments" class="main-logo">
@@ -33,6 +36,7 @@
                 <li><a href="#servicios"><i class="fas fa-microchip" aria-hidden="true"></i> SERVICIOS</a></li>
                 <li><a href="#importaciones"><i class="fas fa-globe" aria-hidden="true"></i> IMPORTACIONES</a></li>
                 <li><a href="#asesoramiento"><i class="fas fa-compass" aria-hidden="true"></i> ASESORAMIENTO</a></li>
+                <li><a href="#cotizaciones"><i class="fas fa-file-invoice-dollar" aria-hidden="true"></i> COTIZACIONES</a></li>
                 <li><a href="#contacto"><i class="fas fa-satellite-dish" aria-hidden="true"></i> CONTACTO</a></li>
             </ul>
 
@@ -48,7 +52,10 @@
             </div>
         </nav>
 
+        <!-- Main Content -->
         <main class="main-content" id="main-content">
+
+            <!-- Top Bar -->
             <header class="top-bar" role="banner">
                 <div class="top-bar-left">
                     <span class="top-bar-tag" aria-hidden="true">// MNKW_CORE_v2.0</span>
@@ -62,6 +69,7 @@
                 </div>
             </header>
 
+            <!-- ── HERO ────────────────────────────────────── -->
             <section id="inicio" class="hero" aria-label="Sección principal">
                 <div class="hero-grid" aria-hidden="true"></div>
                 <div class="hero-scanline" aria-hidden="true"></div>
@@ -82,6 +90,7 @@
                 </div>
             </section>
 
+            <!-- ── STATS ───────────────────────────────────── -->
             <section class="stats-bar" aria-label="Estadísticas clave">
                 <div class="stat-item">
                     <span class="stat-num" data-target="15">0</span><span class="stat-unit">+</span>
@@ -104,6 +113,7 @@
                 </div>
             </section>
 
+            <!-- ── SERVICIOS ───────────────────────────────── -->
             <section id="servicios" class="content-section" aria-labelledby="servicios-title">
                 <div class="section-header">
                     <p class="section-label" aria-hidden="true">// MODULE [02]</p>
@@ -111,6 +121,7 @@
                     <div class="section-line" aria-hidden="true"></div>
                 </div>
                 <div class="cards-grid">
+
                     <article class="card" aria-label="Asistencia Técnica">
                         <div class="card-id" aria-hidden="true">MOD-001</div>
                         <div class="card-icon" aria-hidden="true"><i class="fas fa-car-side"></i></div>
@@ -142,9 +153,11 @@
                         <p>Protocolos industriales de mantenimiento preventivo que maximizan la vida útil y el rendimiento de cada unidad.</p>
                         <div class="card-status" aria-hidden="true"><span class="led"></span> STATUS: ONLINE</div>
                     </article>
+
                 </div>
             </section>
 
+            <!-- ── IMPORTACIONES ───────────────────────────── -->
             <section id="importaciones" class="content-section alt-section" aria-labelledby="importaciones-title">
                 <div class="section-header">
                     <p class="section-label" aria-hidden="true">// MODULE [03]</p>
@@ -153,20 +166,32 @@
                 </div>
                 <div class="import-layout">
                     <div class="import-info">
-                        <p class="lead-text">Conectamos a nuestros clientes con los mejores proveedores automotrices del mundo.</p>
+                        <p class="lead-text">Conectamos a nuestros clientes con los mejores proveedores automotrices del mundo, garantizando autenticidad, calidad certificada y precios competitivos.</p>
                         <ul class="feature-list" role="list">
                             <li><span class="feat-icon" aria-hidden="true">›</span> Piezas OEM y de alto rendimiento</li>
-                            <li><span class="feat-icon" aria-hidden="true">›</span> Gestión logística completa</li>
+                            <li><span class="feat-icon" aria-hidden="true">›</span> Gestión logística completa de principio a fin</li>
+                            <li><span class="feat-icon" aria-hidden="true">›</span> Certificación de origen garantizada</li>
+                            <li><span class="feat-icon" aria-hidden="true">›</span> Tiempos de entrega optimizados</li>
+                            <li><span class="feat-icon" aria-hidden="true">›</span> Asesoría en trámites aduaneros</li>
                         </ul>
-                        <a href="javascript:void(0)" class="btn-primary mt-btn" id="trigger-cotizacion">SOLICITAR COTIZACIÓN</a>
+                        <a href="#contacto" class="btn-primary mt-btn">SOLICITAR COTIZACIÓN</a>
                     </div>
                     <div class="import-globe" aria-hidden="true">
-                        <div class="globe-ring r1"></div><div class="globe-ring r2"></div><div class="globe-ring r3"></div>
-                        <div class="globe-core"><i class="fas fa-globe"></i></div>
+                        <div class="globe-ring r1"></div>
+                        <div class="globe-ring r2"></div>
+                        <div class="globe-ring r3"></div>
+                        <div class="globe-core">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="globe-dot d1"></div>
+                        <div class="globe-dot d2"></div>
+                        <div class="globe-dot d3"></div>
+                        <div class="globe-dot d4"></div>
                     </div>
                 </div>
             </section>
 
+            <!-- ── ASESORAMIENTO ────────────────────────────── -->
             <section id="asesoramiento" class="content-section" aria-labelledby="asesoramiento-title">
                 <div class="section-header">
                     <p class="section-label" aria-hidden="true">// MODULE [04]</p>
@@ -174,36 +199,129 @@
                     <div class="section-line" aria-hidden="true"></div>
                 </div>
                 <div class="advisor-grid">
+
                     <article class="advisor-card" aria-label="Asesoría de Compra">
                         <div class="adv-num" aria-hidden="true">01</div>
                         <i class="fas fa-search-dollar" aria-hidden="true"></i>
                         <h3>ASESORÍA DE COMPRA</h3>
-                        <p>Te orientamos en la selección del vehículo ideal.</p>
+                        <p>Te orientamos en la selección del vehículo ideal según tus necesidades, presupuesto y proyección de uso.</p>
                     </article>
+
                     <article class="advisor-card" aria-label="Inversión Vehicular">
                         <div class="adv-num" aria-hidden="true">02</div>
                         <i class="fas fa-chart-line" aria-hidden="true"></i>
                         <h3>INVERSIÓN VEHICULAR</h3>
-                        <p>Estrategias de inversión en activos automotrices.</p>
+                        <p>Estrategias de inversión en activos automotrices con análisis de mercado, depreciación y retorno proyectado.</p>
                     </article>
+
+                    <article class="advisor-card" aria-label="Consultoría de Flota">
+                        <div class="adv-num" aria-hidden="true">03</div>
+                        <i class="fas fa-truck" aria-hidden="true"></i>
+                        <h3>CONSULTORÍA DE FLOTA</h3>
+                        <p>Optimización integral de flotas empresariales: costos operativos, planes de mantenimiento y renovación estratégica.</p>
+                    </article>
+
                 </div>
             </section>
 
-            <section id="contacto" class="content-section" aria-labelledby="contacto-title">
+            <!-- ── CTA ─────────────────────────────────────── -->
+            <section class="cta-section" aria-labelledby="cta-title">
+                <div class="cta-grid" aria-hidden="true"></div>
+                <div class="cta-content">
+                    <p class="section-label" aria-hidden="true">// INITIATE CONTACT PROTOCOL</p>
+                    <h2 id="cta-title">¿LISTO PARA INICIAR?</h2>
+                    <p>Nuestro equipo técnico está en línea y listo para asistirte. Tiempo de respuesta promedio: 24h.</p>
+                    <a href="#contacto" class="btn-primary btn-lg">
+                        <span class="btn-icon" aria-hidden="true">›</span> CONTACTAR AHORA
+                    </a>
+                </div>
+            </section>
+
+            <!-- ── COTIZACIONES ────────────────────────────── -->
+            <section id="cotizaciones" class="content-section" aria-labelledby="cotizaciones-title">
                 <div class="section-header">
                     <p class="section-label" aria-hidden="true">// MODULE [05]</p>
+                    <h2 id="cotizaciones-title" class="section-title">SOLICITAR COTIZACIÓN</h2>
+                    <div class="section-line" aria-hidden="true"></div>
+                </div>
+                <div class="contact-layout">
+                    <form class="contact-form" action="https://formspree.io/cotizaciones@minakawainvestments.com" method="POST" novalidate aria-label="Formulario de cotización">
+                        <div class="form-group">
+                            <label for="cot-nombre">NOMBRE</label>
+                            <input type="text" id="cot-nombre" name="nombre" placeholder="Ingresa tu nombre completo" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cot-telefono">TELÉFONO</label>
+                            <div class="phone-input-group">
+                                <span class="phone-prefix" aria-hidden="true">+591</span>
+                                <input type="tel" id="cot-telefono" name="telefono" placeholder="Número de teléfono" autocomplete="tel-national">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cot-correo">CORREO ELECTRÓNICO</label>
+                            <input type="email" id="cot-correo" name="correo" placeholder="correo@ejemplo.com" autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cot-mensaje">MENSAJE</label>
+                            <textarea id="cot-mensaje" name="mensaje" rows="5" placeholder="Describe el producto o servicio que deseas cotizar..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit">
+                            <span class="btn-icon" aria-hidden="true">›</span> SOLICITAR COTIZACIÓN
+                        </button>
+                    </form>
+                    <div class="contact-info" aria-label="Información de cotizaciones">
+                        <div class="info-block">
+                            <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
+                            <div>
+                                <strong>COTIZACIONES</strong>
+                                <span>cotizaciones@minakawainvestments.com</span>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            <div>
+                                <strong>TIEMPO DE RESPUESTA</strong>
+                                <span>24 – 48 horas hábiles</span>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                            <div>
+                                <strong>CONFIDENCIALIDAD</strong>
+                                <span>Tu información es tratada con total reserva</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── CONTACTO ────────────────────────────────── -->
+            <section id="contacto" class="content-section" aria-labelledby="contacto-title">
+                <div class="section-header">
+                    <p class="section-label" aria-hidden="true">// MODULE [06]</p>
                     <h2 id="contacto-title" class="section-title">CONTACTO</h2>
                     <div class="section-line" aria-hidden="true"></div>
                 </div>
                 <div class="contact-layout">
-                    <form class="contact-form" novalidate>
+                    <form class="contact-form" novalidate aria-label="Formulario de contacto">
                         <div class="form-group">
                             <label for="nombre">NOMBRE</label>
-                            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" autocomplete="name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">CORREO ELECTRÓNICO</label>
-                            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="servicio">SERVICIO DE INTERÉS</label>
+                            <select id="servicio" name="servicio">
+                                <option value="">— Seleccionar módulo —</option>
+                                <option value="asistencia">Asistencia Técnica</option>
+                                <option value="mecanica">Ingeniería Mecánica</option>
+                                <option value="diagnostico">Diagnóstico Electrónico</option>
+                                <option value="importaciones">Importaciones</option>
+                                <option value="asesoramiento">Asesoramiento</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="mensaje">MENSAJE</label>
@@ -213,79 +331,187 @@
                             <span class="btn-icon" aria-hidden="true">›</span> ENVIAR TRANSMISIÓN
                         </button>
                     </form>
-                    <div class="contact-info">
-                        <div class="info-block"><i class="fas fa-phone"></i><div><strong>LÍNEA DIRECTA</strong><span>+1 800 MNK-AUTO</span></div></div>
+                    <div class="contact-info" aria-label="Información de contacto">
+                        <div class="info-block">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <div>
+                                <strong>UBICACIÓN</strong>
+                                <span>Industrial Zone, Sector 7</span>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <div>
+                                <strong>LÍNEA DIRECTA</strong>
+                                <span>+1 800 MNK-AUTO</span>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <div>
+                                <strong>CANAL DIGITAL</strong>
+                                <span>ops@minakawa.com</span>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            <div>
+                                <strong>HORARIO OPERATIVO</strong>
+                                <span>Lun – Sáb: 08:00 – 18:00</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <footer class="site-footer">
+            <!-- ── FOOTER ──────────────────────────────────── -->
+            <footer class="site-footer" role="contentinfo">
+                <div class="footer-top" aria-hidden="true">
+                    <div class="footer-line"></div>
+                    <span class="footer-marker">◆</span>
+                    <div class="footer-line"></div>
+                </div>
                 <div class="footer-grid">
                     <div class="footer-brand">
                         <img src="logo.png" alt="Minakawa Investments" class="footer-logo">
                         <span class="brand-name">MINAKAWA</span>
+                        <span class="brand-sub">INVESTMENTS</span>
+                        <p class="footer-tagline">Future Automotive. Industrial Precision.</p>
+                    </div>
+                    <nav class="footer-nav" aria-label="Navegación del footer">
+                        <h4 class="footer-heading">MÓDULOS</h4>
+                        <ul role="list">
+                            <li><a href="#inicio">Inicio</a></li>
+                            <li><a href="#servicios">Servicios</a></li>
+                            <li><a href="#importaciones">Importaciones</a></li>
+                            <li><a href="#asesoramiento">Asesoramiento</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer-sys">
+                        <h4 class="footer-heading">SYSTEM INFO</h4>
+                        <ul role="list" aria-label="Información del sistema">
+                            <li><span class="sys-key">VERSION</span><span class="sys-val">v2.0.0</span></li>
+                            <li><span class="sys-key">STATUS</span><span class="sys-val online">ONLINE</span></li>
+                            <li><span class="sys-key">NODE</span><span class="sys-val">MNK-CORE-01</span></li>
+                            <li><span class="sys-key">PROTOCOL</span><span class="sys-val">SECURE</span></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="footer-bottom">
                     <span>© <span id="footer-year"></span> MINAKAWA INVESTMENTS — ALL SYSTEMS RESERVED</span>
+                    <span class="footer-id" aria-hidden="true">BUILD::0xMNK-2024-PROD</span>
                 </div>
             </footer>
+
         </main>
     </div>
 
-    <!-- ── MODAL EMERGENTE DE COTIZACIÓN ──────────────── -->
-    <div id="modal-cotizacion" class="modal-overlay" aria-hidden="true">
-        <div class="modal-container">
-            <button class="modal-close" id="close-modal">&times;</button>
-            <div class="section-header">
-                <p class="section-label" aria-hidden="true">// QUOTE PROTOCOL</p>
-                <h2 class="section-title">SOLICITAR COTIZACIÓN</h2>
-                <div class="section-line" aria-hidden="true"></div>
-            </div>
-            <form class="contact-form" action="https://formspree.io/f/cotizaciones@minakawainvestments.com" method="POST">
-                <div class="form-group">
-                    <label for="cot-nombre">NOMBRE</label>
-                    <input type="text" id="cot-nombre" name="nombre" placeholder="Tu nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="cot-telefono">TELÉFONO (BOLIVIA)</label>
-                    <div class="phone-input-group">
-                        <span class="phone-prefix">+591</span>
-                        <input type="tel" id="cot-telefono" name="telefono" placeholder="70000000" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="cot-email">CORREO</label>
-                    <input type="email" id="cot-email" name="email" placeholder="correo@ejemplo.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="cot-mensaje">MENSAJE</label>
-                    <textarea id="cot-mensaje" name="mensaje" rows="4" placeholder="Detalles de la cotización..." required></textarea>
-                </div>
-                <button type="submit" class="btn-primary btn-submit">ENVIAR COTIZACIÓN</button>
-            </form>
-        </div>
-    </div>
-
     <script>
-        // Reloj y Año
-        setInterval(() => { const el = document.getElementById('live-time'); if(el) el.textContent = new Date().toLocaleTimeString('es',{hour12:false}); }, 1000);
-        document.getElementById('footer-year').textContent = new Date().getFullYear();
+        /* ── Live clock ──────────────────────────────── */
+        function updateClock() {
+            const el = document.getElementById('live-time');
+            if (el) {
+                const now = new Date();
+                el.textContent = now.toLocaleTimeString('es', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+            }
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
 
-        // Lógica del Modal
-        const modal = document.getElementById('modal-cotizacion');
-        const trigger = document.getElementById('trigger-cotizacion');
-        const close = document.getElementById('close-modal');
+        /* ── Footer year ─────────────────────────────── */
+        const yearEl = document.getElementById('footer-year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-        trigger.addEventListener('click', () => { modal.classList.add('active'); document.body.style.overflow = 'hidden'; });
-        const hideModal = () => { modal.classList.remove('active'); document.body.style.overflow = ''; };
-        close.addEventListener('click', hideModal);
-        modal.addEventListener('click', (e) => { if(e.target === modal) hideModal(); });
+        /* ── Animated stat counters ──────────────────── */
+        function animateCounters() {
+            document.querySelectorAll('.stat-num[data-target]').forEach(el => {
+                const target = +el.dataset.target;
+                const duration = 1800;
+                const step = target / (duration / 16);
+                let current = 0;
+                const update = () => {
+                    current = Math.min(current + step, target);
+                    el.textContent = Math.floor(current);
+                    if (current < target) requestAnimationFrame(update);
+                };
+                requestAnimationFrame(update);
+            });
+        }
 
-        // Mobile Nav
+        /* ── Intersection Observer for counters ──────── */
+        const statsBar = document.querySelector('.stats-bar');
+        if (statsBar && 'IntersectionObserver' in window) {
+            const io = new IntersectionObserver(entries => {
+                if (entries[0].isIntersecting) {
+                    animateCounters();
+                    io.disconnect();
+                }
+            }, { threshold: 0.3 });
+            io.observe(statsBar);
+        }
+
+        /* ── Scroll-reveal ───────────────────────────── */
+        const revealEls = document.querySelectorAll('.card, .advisor-card, .info-block');
+        if ('IntersectionObserver' in window) {
+            const revealIO = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('revealed');
+                        revealIO.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            revealEls.forEach(el => { el.classList.add('reveal-hidden'); revealIO.observe(el); });
+        }
+
+        /* ── Active nav link on scroll ───────────────── */
+        const sections = document.querySelectorAll('section[id]');
+        const navItems = document.querySelectorAll('.nav-links li');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => {
+                if (window.scrollY >= s.offsetTop - 120) current = s.id;
+            });
+            navItems.forEach(li => {
+                const a = li.querySelector('a');
+                li.classList.toggle('active', a && a.getAttribute('href') === '#' + current);
+                if (a) a.setAttribute('aria-current', a.getAttribute('href') === '#' + current ? 'page' : 'false');
+            });
+        }, { passive: true });
+
+        /* ── Mobile nav toggle ────────────────────────── */
         const toggle = document.querySelector('.nav-toggle');
         const sidebar = document.getElementById('sidebar');
-        toggle.addEventListener('click', () => { sidebar.classList.toggle('open'); });
+        const overlay = document.querySelector('.nav-overlay');
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('visible');
+            toggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+        toggle.addEventListener('click', () => {
+            const isOpen = sidebar.classList.toggle('open');
+            overlay.classList.toggle('visible', isOpen);
+            toggle.setAttribute('aria-expanded', String(isOpen));
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+        overlay.addEventListener('click', closeSidebar);
+        document.querySelectorAll('.nav-links a').forEach(a => {
+            a.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+        });
+
+        /* ── Contact form feedback ───────────────────── */
+        const form = document.querySelector('.contact-form');
+        if (form) {
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                const btn = form.querySelector('button[type="submit"]');
+                btn.textContent = '✔ TRANSMISIÓN ENVIADA';
+                btn.disabled = true;
+                btn.classList.add('sent');
+            });
+        }
     </script>
 </body>
 </html>
