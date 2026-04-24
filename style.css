@@ -1,0 +1,62 @@
+```css name=style.css
+:root {
+    --primary: #e67e22; /* Naranja automotriz */
+    --dark: #121212;
+    --sidebar-width: 260px;
+    --text: #333;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body { background: #f9f9f9; color: var(--text); }
+
+.container { display: flex; }
+
+/* Sidebar Estilo */
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    background: var(--dark);
+    color: white;
+    position: fixed;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo h1 { color: var(--primary); font-size: 1.5rem; letter-spacing: 1px; }
+.logo span { font-size: 0.8rem; letter-spacing: 4px; color: #888; }
+
+.nav-links { list-style: none; margin-top: 3rem; flex-grow: 1; }
+.nav-links li { margin-bottom: 1.5rem; }
+.nav-links a { 
+    color: #bbb; text-decoration: none; font-size: 1.1rem; 
+    display: flex; align-items: center; transition: 0.3s;
+}
+.nav-links a i { margin-right: 15px; width: 20px; }
+.nav-links a:hover { color: var(--primary); transform: translateX(5px); }
+
+/* Contenido Principal */
+.main-content { margin-left: var(--sidebar-width); width: 100%; }
+
+.section { padding: 80px 50px; }
+.gray-bg { background: #eee; }
+
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1530046339160-ce3e5b0c7a2f?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex; align-items: center; justify-content: center;
+    color: white; text-align: center;
+}
+
+.btn {
+    display: inline-block; padding: 12px 30px; background: var(--primary);
+    color: white; text-decoration: none; border-radius: 5px; margin-top: 20px;
+}
+
+.cards-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+.card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; }
+.card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
+```
