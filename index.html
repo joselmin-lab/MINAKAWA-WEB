@@ -4,74 +4,455 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minakawa Investments | Future Automotive</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- Menú Lateral Futurista -->
-        <nav class="sidebar">
+    <!-- Mobile menu toggle -->
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar">
+        <span></span><span></span><span></span>
+    </button>
+
+    <!-- Overlay for mobile menu -->
+    <div class="nav-overlay" aria-hidden="true"></div>
+
+    <div class="layout">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar" role="navigation" aria-label="Menú principal">
             <div class="logo-container">
-                <!-- Aquí va tu logo -->
-                <img src="logo.png" alt="Minakawa Logo" class="main-logo">
+                <img src="logo.png" alt="Minakawa Investments" class="main-logo">
                 <div class="brand-text">
                     <span class="brand-name">MINAKAWA</span>
                     <span class="brand-sub">INVESTMENTS</span>
                 </div>
             </div>
 
-            <ul class="nav-links">
-                <li class="active"><a href="#inicio"><i class="fas fa-terminal"></i> INICIO</a></li>
-                <li><a href="#servicios"><i class="fas fa-microchip"></i> SERVICIOS</a></li>
-                <li><a href="#importaciones"><i class="fas fa-globe"></i> IMPORTACIONES</a></li>
-                <li><a href="#asesoramiento"><i class="fas fa-compass"></i> ASESORAMIENTO</a></li>
+            <ul class="nav-links" role="list">
+                <li class="active"><a href="#inicio" aria-current="page"><i class="fas fa-terminal" aria-hidden="true"></i> INICIO</a></li>
+                <li><a href="#servicios"><i class="fas fa-microchip" aria-hidden="true"></i> SERVICIOS</a></li>
+                <li><a href="#importaciones"><i class="fas fa-globe" aria-hidden="true"></i> IMPORTACIONES</a></li>
+                <li><a href="#asesoramiento"><i class="fas fa-compass" aria-hidden="true"></i> ASESORAMIENTO</a></li>
+                <li><a href="#contacto"><i class="fas fa-satellite-dish" aria-hidden="true"></i> CONTACTO</a></li>
             </ul>
 
-            <div class="status-indicator">
-                <div class="pulse"></div>
-                <span>SYSTEM ONLINE</span>
+            <div class="sidebar-footer">
+                <div class="status-indicator" role="status" aria-live="polite">
+                    <div class="pulse" aria-hidden="true"></div>
+                    <span>SYSTEM ONLINE</span>
+                </div>
+                <div class="sys-info" aria-hidden="true">
+                    <span>MNKW_CORE_v2.0</span>
+                    <span class="sys-id">ID::0xMNK7</span>
+                </div>
             </div>
         </nav>
 
-        <!-- Contenido Principal -->
-        <main class="main-content">
-            <header class="top-bar">
-                <div class="scanline"></div>
-                <p>MNKW_CORE_v2.0 // INDUSTRIAL SERVICES</p>
+        <!-- Main Content -->
+        <main class="main-content" id="main-content">
+
+            <!-- Top Bar -->
+            <header class="top-bar" role="banner">
+                <div class="top-bar-left">
+                    <span class="top-bar-tag" aria-hidden="true">// MNKW_CORE_v2.0</span>
+                    <span class="top-bar-tag" aria-hidden="true">INDUSTRIAL&nbsp;SERVICES</span>
+                </div>
+                <div class="top-bar-right" aria-hidden="true">
+                    <span class="blink-dot"></span>
+                    <span>ONLINE</span>
+                    <span class="separator">|</span>
+                    <span id="live-time"></span>
+                </div>
             </header>
 
-            <section id="inicio" class="hero">
-                <div class="hero-overlay"></div>
+            <!-- ── HERO ────────────────────────────────────── -->
+            <section id="inicio" class="hero" aria-label="Sección principal">
+                <div class="hero-grid" aria-hidden="true"></div>
+                <div class="hero-scanline" aria-hidden="true"></div>
                 <div class="hero-content">
-                    <h1 class="glitch" data-text="MANTENIMIENTO_FUTURO">MANTENIMIENTO FUTURO</h1>
-                    <p>Integrando tecnología y precisión en cada componente vehicular.</p>
+                    <p class="hero-label" aria-hidden="true">// MODULE [01] — CORE STATEMENT</p>
+                    <h1 class="glitch" data-text="MANTENIMIENTO FUTURO">MANTENIMIENTO FUTURO</h1>
+                    <p class="hero-sub">Integrando tecnología de vanguardia y precisión industrial en cada componente vehicular.</p>
                     <div class="hero-btns">
-                        <a href="#servicios" class="btn-primary">EXPLORAR SERVICIOS</a>
+                        <a href="#servicios" class="btn-primary">
+                            <span class="btn-icon" aria-hidden="true">›</span> EXPLORAR SERVICIOS
+                        </a>
                         <a href="#contacto" class="btn-outline">CONTACTO</a>
                     </div>
                 </div>
+                <div class="hero-badge" aria-hidden="true">
+                    <span>STATUS: ACTIVE</span>
+                    <span class="badge-id">SYS::MNK-AUTO</span>
+                </div>
             </section>
 
-            <section id="servicios" class="grid-section">
-                <h2 class="section-title">NUCLEO DE SERVICIOS</h2>
+            <!-- ── STATS ───────────────────────────────────── -->
+            <section class="stats-bar" aria-label="Estadísticas clave">
+                <div class="stat-item">
+                    <span class="stat-num" data-target="15">0</span><span class="stat-unit">+</span>
+                    <span class="stat-label">Años de operación</span>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat-item">
+                    <span class="stat-num" data-target="2400">0</span><span class="stat-unit">+</span>
+                    <span class="stat-label">Vehículos atendidos</span>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat-item">
+                    <span class="stat-num" data-target="98">0</span><span class="stat-unit">%</span>
+                    <span class="stat-label">Satisfacción del cliente</span>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat-item">
+                    <span class="stat-num" data-target="12">0</span><span class="stat-unit"></span>
+                    <span class="stat-label">Países de importación</span>
+                </div>
+            </section>
+
+            <!-- ── SERVICIOS ───────────────────────────────── -->
+            <section id="servicios" class="content-section" aria-labelledby="servicios-title">
+                <div class="section-header">
+                    <p class="section-label" aria-hidden="true">// MODULE [02]</p>
+                    <h2 id="servicios-title" class="section-title">NUCLEO DE SERVICIOS</h2>
+                    <div class="section-line" aria-hidden="true"></div>
+                </div>
                 <div class="cards-grid">
-                    <div class="card">
-                        <div class="card-edge"></div>
-                        <i class="fas fa-car-side"></i>
-                        <h3>ASISTENCIA TECNICA</h3>
-                        <p>Diagnóstico computarizado de alta precisión para flotas y particulares.</p>
+
+                    <article class="card" aria-label="Asistencia Técnica">
+                        <div class="card-id" aria-hidden="true">MOD-001</div>
+                        <div class="card-icon" aria-hidden="true"><i class="fas fa-car-side"></i></div>
+                        <h3>ASISTENCIA TÉCNICA</h3>
+                        <p>Diagnóstico computarizado de alta precisión para flotas y particulares. Equipos de última generación para detección de fallas.</p>
+                        <div class="card-status" aria-hidden="true"><span class="led"></span> STATUS: ONLINE</div>
+                    </article>
+
+                    <article class="card" aria-label="Ingeniería Mecánica">
+                        <div class="card-id" aria-hidden="true">MOD-002</div>
+                        <div class="card-icon" aria-hidden="true"><i class="fas fa-cogs"></i></div>
+                        <h3>INGENIERÍA MECÁNICA</h3>
+                        <p>Reparaciones complejas bajo estándares industriales internacionales. Precisión milimétrica en cada intervención.</p>
+                        <div class="card-status" aria-hidden="true"><span class="led"></span> STATUS: ONLINE</div>
+                    </article>
+
+                    <article class="card" aria-label="Diagnóstico Electrónico">
+                        <div class="card-id" aria-hidden="true">MOD-003</div>
+                        <div class="card-icon" aria-hidden="true"><i class="fas fa-microchip"></i></div>
+                        <h3>DIAGNÓSTICO ELECTRÓNICO</h3>
+                        <p>Análisis profundo de sistemas ECU, sensores y redes CAN. Soluciones para vehículos de alta tecnología.</p>
+                        <div class="card-status" aria-hidden="true"><span class="led"></span> STATUS: ONLINE</div>
+                    </article>
+
+                    <article class="card" aria-label="Mantenimiento Preventivo">
+                        <div class="card-id" aria-hidden="true">MOD-004</div>
+                        <div class="card-icon" aria-hidden="true"><i class="fas fa-shield-alt"></i></div>
+                        <h3>MANTENIMIENTO PREVENTIVO</h3>
+                        <p>Protocolos industriales de mantenimiento preventivo que maximizan la vida útil y el rendimiento de cada unidad.</p>
+                        <div class="card-status" aria-hidden="true"><span class="led"></span> STATUS: ONLINE</div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- ── IMPORTACIONES ───────────────────────────── -->
+            <section id="importaciones" class="content-section alt-section" aria-labelledby="importaciones-title">
+                <div class="section-header">
+                    <p class="section-label" aria-hidden="true">// MODULE [03]</p>
+                    <h2 id="importaciones-title" class="section-title">IMPORTACIONES</h2>
+                    <div class="section-line" aria-hidden="true"></div>
+                </div>
+                <div class="import-layout">
+                    <div class="import-info">
+                        <p class="lead-text">Conectamos a nuestros clientes con los mejores proveedores automotrices del mundo, garantizando autenticidad, calidad certificada y precios competitivos.</p>
+                        <ul class="feature-list" role="list">
+                            <li><span class="feat-icon" aria-hidden="true">›</span> Piezas OEM y de alto rendimiento</li>
+                            <li><span class="feat-icon" aria-hidden="true">›</span> Gestión logística completa de principio a fin</li>
+                            <li><span class="feat-icon" aria-hidden="true">›</span> Certificación de origen garantizada</li>
+                            <li><span class="feat-icon" aria-hidden="true">›</span> Tiempos de entrega optimizados</li>
+                            <li><span class="feat-icon" aria-hidden="true">›</span> Asesoría en trámites aduaneros</li>
+                        </ul>
+                        <a href="#contacto" class="btn-primary mt-btn">SOLICITAR COTIZACIÓN</a>
                     </div>
-                    <div class="card">
-                        <div class="card-edge"></div>
-                        <i class="fas fa-cogs"></i>
-                        <h3>INGENIERIA MECANICA</h3>
-                        <p>Reparaciones complejas bajo estándares industriales internacionales.</p>
+                    <div class="import-globe" aria-hidden="true">
+                        <div class="globe-ring r1"></div>
+                        <div class="globe-ring r2"></div>
+                        <div class="globe-ring r3"></div>
+                        <div class="globe-core">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="globe-dot d1"></div>
+                        <div class="globe-dot d2"></div>
+                        <div class="globe-dot d3"></div>
+                        <div class="globe-dot d4"></div>
                     </div>
                 </div>
             </section>
+
+            <!-- ── ASESORAMIENTO ────────────────────────────── -->
+            <section id="asesoramiento" class="content-section" aria-labelledby="asesoramiento-title">
+                <div class="section-header">
+                    <p class="section-label" aria-hidden="true">// MODULE [04]</p>
+                    <h2 id="asesoramiento-title" class="section-title">ASESORAMIENTO</h2>
+                    <div class="section-line" aria-hidden="true"></div>
+                </div>
+                <div class="advisor-grid">
+
+                    <article class="advisor-card" aria-label="Asesoría de Compra">
+                        <div class="adv-num" aria-hidden="true">01</div>
+                        <i class="fas fa-search-dollar" aria-hidden="true"></i>
+                        <h3>ASESORÍA DE COMPRA</h3>
+                        <p>Te orientamos en la selección del vehículo ideal según tus necesidades, presupuesto y proyección de uso.</p>
+                    </article>
+
+                    <article class="advisor-card" aria-label="Inversión Vehicular">
+                        <div class="adv-num" aria-hidden="true">02</div>
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        <h3>INVERSIÓN VEHICULAR</h3>
+                        <p>Estrategias de inversión en activos automotrices con análisis de mercado, depreciación y retorno proyectado.</p>
+                    </article>
+
+                    <article class="advisor-card" aria-label="Consultoría de Flota">
+                        <div class="adv-num" aria-hidden="true">03</div>
+                        <i class="fas fa-truck" aria-hidden="true"></i>
+                        <h3>CONSULTORÍA DE FLOTA</h3>
+                        <p>Optimización integral de flotas empresariales: costos operativos, planes de mantenimiento y renovación estratégica.</p>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- ── CTA ─────────────────────────────────────── -->
+            <section class="cta-section" aria-labelledby="cta-title">
+                <div class="cta-grid" aria-hidden="true"></div>
+                <div class="cta-content">
+                    <p class="section-label" aria-hidden="true">// INITIATE CONTACT PROTOCOL</p>
+                    <h2 id="cta-title">¿LISTO PARA INICIAR?</h2>
+                    <p>Nuestro equipo técnico está en línea y listo para asistirte. Tiempo de respuesta promedio: 24h.</p>
+                    <a href="#contacto" class="btn-primary btn-lg">
+                        <span class="btn-icon" aria-hidden="true">›</span> CONTACTAR AHORA
+                    </a>
+                </div>
+            </section>
+
+            <!-- ── CONTACTO ────────────────────────────────── -->
+            <section id="contacto" class="content-section" aria-labelledby="contacto-title">
+                <div class="section-header">
+                    <p class="section-label" aria-hidden="true">// MODULE [05]</p>
+                    <h2 id="contacto-title" class="section-title">CONTACTO</h2>
+                    <div class="section-line" aria-hidden="true"></div>
+                </div>
+                <div class="contact-layout">
+                    <form class="contact-form" novalidate aria-label="Formulario de contacto">
+                        <div class="form-group">
+                            <label for="nombre">NOMBRE</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">CORREO ELECTRÓNICO</label>
+                            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="servicio">SERVICIO DE INTERÉS</label>
+                            <select id="servicio" name="servicio">
+                                <option value="">— Seleccionar módulo —</option>
+                                <option value="asistencia">Asistencia Técnica</option>
+                                <option value="mecanica">Ingeniería Mecánica</option>
+                                <option value="diagnostico">Diagnóstico Electrónico</option>
+                                <option value="importaciones">Importaciones</option>
+                                <option value="asesoramiento">Asesoramiento</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">MENSAJE</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe tu consulta..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit">
+                            <span class="btn-icon" aria-hidden="true">›</span> ENVIAR TRANSMISIÓN
+                        </button>
+                    </form>
+                    <div class="contact-info" aria-label="Información de contacto">
+                        <div class="info-block">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <div>
+                                <strong>UBICACIÓN</strong>
+                                <span>Industrial Zone, Sector 7</span>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <div>
+                                <strong>LÍNEA DIRECTA</strong>
+                                <span>+1 800 MNK-AUTO</span>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <div>
+                                <strong>CANAL DIGITAL</strong>
+                                <span>ops@minakawa.com</span>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            <div>
+                                <strong>HORARIO OPERATIVO</strong>
+                                <span>Lun – Sáb: 08:00 – 18:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── FOOTER ──────────────────────────────────── -->
+            <footer class="site-footer" role="contentinfo">
+                <div class="footer-top" aria-hidden="true">
+                    <div class="footer-line"></div>
+                    <span class="footer-marker">◆</span>
+                    <div class="footer-line"></div>
+                </div>
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <img src="logo.png" alt="Minakawa Investments" class="footer-logo">
+                        <span class="brand-name">MINAKAWA</span>
+                        <span class="brand-sub">INVESTMENTS</span>
+                        <p class="footer-tagline">Future Automotive. Industrial Precision.</p>
+                    </div>
+                    <nav class="footer-nav" aria-label="Navegación del footer">
+                        <h4 class="footer-heading">MÓDULOS</h4>
+                        <ul role="list">
+                            <li><a href="#inicio">Inicio</a></li>
+                            <li><a href="#servicios">Servicios</a></li>
+                            <li><a href="#importaciones">Importaciones</a></li>
+                            <li><a href="#asesoramiento">Asesoramiento</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer-sys">
+                        <h4 class="footer-heading">SYSTEM INFO</h4>
+                        <ul role="list" aria-label="Información del sistema">
+                            <li><span class="sys-key">VERSION</span><span class="sys-val">v2.0.0</span></li>
+                            <li><span class="sys-key">STATUS</span><span class="sys-val online">ONLINE</span></li>
+                            <li><span class="sys-key">NODE</span><span class="sys-val">MNK-CORE-01</span></li>
+                            <li><span class="sys-key">PROTOCOL</span><span class="sys-val">SECURE</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span>© <span id="footer-year"></span> MINAKAWA INVESTMENTS — ALL SYSTEMS RESERVED</span>
+                    <span class="footer-id" aria-hidden="true">BUILD::0xMNK-2024-PROD</span>
+                </div>
+            </footer>
+
         </main>
     </div>
 
+    <script>
+        /* ── Live clock ──────────────────────────────── */
+        function updateClock() {
+            const el = document.getElementById('live-time');
+            if (el) {
+                const now = new Date();
+                el.textContent = now.toLocaleTimeString('es', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+            }
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+
+        /* ── Footer year ─────────────────────────────── */
+        const yearEl = document.getElementById('footer-year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        /* ── Animated stat counters ──────────────────── */
+        function animateCounters() {
+            document.querySelectorAll('.stat-num[data-target]').forEach(el => {
+                const target = +el.dataset.target;
+                const duration = 1800;
+                const step = target / (duration / 16);
+                let current = 0;
+                const update = () => {
+                    current = Math.min(current + step, target);
+                    el.textContent = Math.floor(current);
+                    if (current < target) requestAnimationFrame(update);
+                };
+                requestAnimationFrame(update);
+            });
+        }
+
+        /* ── Intersection Observer for counters ──────── */
+        const statsBar = document.querySelector('.stats-bar');
+        if (statsBar && 'IntersectionObserver' in window) {
+            const io = new IntersectionObserver(entries => {
+                if (entries[0].isIntersecting) {
+                    animateCounters();
+                    io.disconnect();
+                }
+            }, { threshold: 0.3 });
+            io.observe(statsBar);
+        }
+
+        /* ── Scroll-reveal ───────────────────────────── */
+        const revealEls = document.querySelectorAll('.card, .advisor-card, .info-block');
+        if ('IntersectionObserver' in window) {
+            const revealIO = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('revealed');
+                        revealIO.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            revealEls.forEach(el => { el.classList.add('reveal-hidden'); revealIO.observe(el); });
+        }
+
+        /* ── Active nav link on scroll ───────────────── */
+        const sections = document.querySelectorAll('section[id]');
+        const navItems = document.querySelectorAll('.nav-links li');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => {
+                if (window.scrollY >= s.offsetTop - 120) current = s.id;
+            });
+            navItems.forEach(li => {
+                const a = li.querySelector('a');
+                li.classList.toggle('active', a && a.getAttribute('href') === '#' + current);
+                if (a) a.setAttribute('aria-current', a.getAttribute('href') === '#' + current ? 'page' : 'false');
+            });
+        }, { passive: true });
+
+        /* ── Mobile nav toggle ────────────────────────── */
+        const toggle = document.querySelector('.nav-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.querySelector('.nav-overlay');
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('visible');
+            toggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+        toggle.addEventListener('click', () => {
+            const isOpen = sidebar.classList.toggle('open');
+            overlay.classList.toggle('visible', isOpen);
+            toggle.setAttribute('aria-expanded', String(isOpen));
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+        overlay.addEventListener('click', closeSidebar);
+        document.querySelectorAll('.nav-links a').forEach(a => {
+            a.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+        });
+
+        /* ── Contact form feedback ───────────────────── */
+        const form = document.querySelector('.contact-form');
+        if (form) {
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                const btn = form.querySelector('button[type="submit"]');
+                btn.textContent = '✔ TRANSMISIÓN ENVIADA';
+                btn.disabled = true;
+                btn.classList.add('sent');
+            });
+        }
+    </script>
 </body>
 </html>
