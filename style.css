@@ -1,62 +1,218 @@
-```css name=style.css
 :root {
-    --primary: #e67e22; /* Naranja automotriz */
-    --dark: #121212;
-    --sidebar-width: 260px;
-    --text: #333;
+    --bg-black: #0a0a0a;
+    --accent-red: #ff0000;
+    --accent-red-dim: #800000;
+    --text-white: #ffffff;
+    --text-gray: #a0a0a0;
+    --sidebar-bg: #0d0d0d;
+    --glass: rgba(255, 255, 255, 0.03);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace; /* Toque industrial */
+}
 
-body { background: #f9f9f9; color: var(--text); }
+body {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    overflow-x: hidden;
+}
 
 .container { display: flex; }
 
-/* Sidebar Estilo */
+/* --- SIDEBAR FUTURISTA --- */
 .sidebar {
-    width: var(--sidebar-width);
+    width: 280px;
     height: 100vh;
-    background: var(--dark);
-    color: white;
+    background: var(--sidebar-bg);
+    border-right: 1px solid #222;
     position: fixed;
-    padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
+    padding: 2rem 1rem;
+    z-index: 100;
 }
 
-.logo h1 { color: var(--primary); font-size: 1.5rem; letter-spacing: 1px; }
-.logo span { font-size: 0.8rem; letter-spacing: 4px; color: #888; }
-
-.nav-links { list-style: none; margin-top: 3rem; flex-grow: 1; }
-.nav-links li { margin-bottom: 1.5rem; }
-.nav-links a { 
-    color: #bbb; text-decoration: none; font-size: 1.1rem; 
-    display: flex; align-items: center; transition: 0.3s;
+.logo-container {
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #222;
 }
+
+.main-logo {
+    width: 80px;
+    filter: drop-shadow(0 0 5px var(--accent-red));
+    margin-bottom: 10px;
+}
+
+.brand-name {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--text-white);
+}
+
+.brand-sub {
+    font-size: 0.7rem;
+    color: var(--accent-red);
+    letter-spacing: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    margin-top: 3rem;
+}
+
+.nav-links li {
+    margin-bottom: 0.5rem;
+}
+
+.nav-links a {
+    color: var(--text-gray);
+    text-decoration: none;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    border-left: 3px solid transparent;
+    transition: 0.3s;
+}
+
 .nav-links a i { margin-right: 15px; width: 20px; }
-.nav-links a:hover { color: var(--primary); transform: translateX(5px); }
 
-/* Contenido Principal */
-.main-content { margin-left: var(--sidebar-width); width: 100%; }
+.nav-links li:hover a, .nav-links li.active a {
+    background: linear-gradient(90deg, rgba(255,0,0,0.1) 0%, transparent 100%);
+    color: var(--text-white);
+    border-left: 3px solid var(--accent-red);
+}
 
-.section { padding: 80px 50px; }
-.gray-bg { background: #eee; }
+/* --- CONTENIDO --- */
+.main-content {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+}
+
+.top-bar {
+    background: #000;
+    padding: 10px 30px;
+    font-size: 0.7rem;
+    color: var(--accent-red);
+    border-bottom: 1px solid #222;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 90;
+}
 
 .hero {
-    height: 60vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1530046339160-ce3e5b0c7a2f?auto=format&fit=crop&w=1500&q=80');
+    height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
-    display: flex; align-items: center; justify-content: center;
-    color: white; text-align: center;
 }
 
-.btn {
-    display: inline-block; padding: 12px 30px; background: var(--primary);
-    color: white; text-decoration: none; border-radius: 5px; margin-top: 20px;
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(90deg, #000 20%, transparent 100%);
 }
 
-.cards-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-.card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; }
-.card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
-```
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background: var(--accent-red);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    border: none;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+}
+
+/* --- TARJETAS INDUSTRIALES --- */
+.grid-section { padding: 4rem; }
+
+.section-title {
+    border-left: 5px solid var(--accent-red);
+    padding-left: 15px;
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--glass);
+    border: 1px solid #222;
+    padding: 3rem 2rem;
+    position: relative;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: var(--accent-red);
+    background: rgba(255,0,0,0.02);
+}
+
+.card-edge {
+    position: absolute;
+    top: 0; right: 0;
+    width: 20px; height: 20px;
+    border-top: 2px solid var(--accent-red);
+    border-right: 2px solid var(--accent-red);
+}
+
+.card i {
+    font-size: 2.5rem;
+    color: var(--accent-red);
+    margin-bottom: 20px;
+}
+
+/* Indicador de estado animado */
+.status-indicator {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+    color: #444;
+}
+
+.pulse {
+    width: 8px; height: 8px;
+    background: #0f0;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 5px #0f0;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
