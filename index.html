@@ -36,6 +36,7 @@
                 <li><a href="#servicios"><i class="fas fa-microchip" aria-hidden="true"></i> SERVICIOS</a></li>
                 <li><a href="#importaciones"><i class="fas fa-globe" aria-hidden="true"></i> IMPORTACIONES</a></li>
                 <li><a href="#asesoramiento"><i class="fas fa-compass" aria-hidden="true"></i> ASESORAMIENTO</a></li>
+                <li><a href="#cotizaciones"><i class="fas fa-file-invoice-dollar" aria-hidden="true"></i> COTIZACIONES</a></li>
                 <li><a href="#contacto"><i class="fas fa-satellite-dish" aria-hidden="true"></i> CONTACTO</a></li>
             </ul>
 
@@ -236,10 +237,68 @@
                 </div>
             </section>
 
+            <!-- ── COTIZACIONES ────────────────────────────── -->
+            <section id="cotizaciones" class="content-section" aria-labelledby="cotizaciones-title">
+                <div class="section-header">
+                    <p class="section-label" aria-hidden="true">// MODULE [05]</p>
+                    <h2 id="cotizaciones-title" class="section-title">SOLICITAR COTIZACIÓN</h2>
+                    <div class="section-line" aria-hidden="true"></div>
+                </div>
+                <div class="contact-layout">
+                    <form class="contact-form" action="https://formspree.io/cotizaciones@minakawainvestments.com" method="POST" novalidate aria-label="Formulario de cotización">
+                        <div class="form-group">
+                            <label for="cot-nombre">NOMBRE</label>
+                            <input type="text" id="cot-nombre" name="nombre" placeholder="Ingresa tu nombre completo" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cot-telefono">TELÉFONO</label>
+                            <div class="phone-input-group">
+                                <span class="phone-prefix" aria-hidden="true">+591</span>
+                                <input type="tel" id="cot-telefono" name="telefono" placeholder="Número de teléfono" autocomplete="tel-national">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cot-correo">CORREO ELECTRÓNICO</label>
+                            <input type="email" id="cot-correo" name="correo" placeholder="correo@ejemplo.com" autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cot-mensaje">MENSAJE</label>
+                            <textarea id="cot-mensaje" name="mensaje" rows="5" placeholder="Describe el producto o servicio que deseas cotizar..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit">
+                            <span class="btn-icon" aria-hidden="true">›</span> SOLICITAR COTIZACIÓN
+                        </button>
+                    </form>
+                    <div class="contact-info" aria-label="Información de cotizaciones">
+                        <div class="info-block">
+                            <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
+                            <div>
+                                <strong>COTIZACIONES</strong>
+                                <span>cotizaciones@minakawainvestments.com</span>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            <div>
+                                <strong>TIEMPO DE RESPUESTA</strong>
+                                <span>24 – 48 horas hábiles</span>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                            <div>
+                                <strong>CONFIDENCIALIDAD</strong>
+                                <span>Tu información es tratada con total reserva</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- ── CONTACTO ────────────────────────────────── -->
             <section id="contacto" class="content-section" aria-labelledby="contacto-title">
                 <div class="section-header">
-                    <p class="section-label" aria-hidden="true">// MODULE [05]</p>
+                    <p class="section-label" aria-hidden="true">// MODULE [06]</p>
                     <h2 id="contacto-title" class="section-title">CONTACTO</h2>
                     <div class="section-line" aria-hidden="true"></div>
                 </div>
